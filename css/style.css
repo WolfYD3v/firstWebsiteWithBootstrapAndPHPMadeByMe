@@ -6,3 +6,16 @@
 .pos_relative {
     position: relative;
 }
+
+.shopping_section {
+    min-height: 100vh;
+}
+
+/* FEEDBACK */
+li {
+    transform: scale(1.0);
+    transition: all 0.2s ease-in-out;
+}
+li:hover {
+    transform: scale(1.05);
+}

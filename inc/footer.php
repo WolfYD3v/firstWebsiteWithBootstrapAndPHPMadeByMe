@@ -30,16 +30,16 @@
                         <a href="#">CONTACT</a>
                     </li>
                     <li>
-                        <a href="#">SHOP</a>
+                        <a href="index.php">SHOP</a>
                     </li>
                     <li>
-                        <a href="#">CARTTT</a>
+                        <a href="cart.php">CARTTT</a>
                     </li>
                     <li>
-                        <a href="#">My PrOfIlE</a>
+                        <a href="profile.php">My PrOfIlE</a>
                     </li>
                     <li>
-                        <a href="#">Kaunhêquession</a>
+                        <a href="connection.php">Kaunhêquession</a>
                     </li>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
 
         <div class="footer-copyright text-center py-3">
             c 2026 Copyright
-            <a href="#">Bootstrap Online Shop With PHP</a>
+            <a href="index.php">Bootstrap Online Shop With PHP</a>
         </div>
     </div>
 </footer>

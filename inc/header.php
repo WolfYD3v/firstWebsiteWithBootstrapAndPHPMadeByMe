@@ -5,7 +5,7 @@
 <div id="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="25" class="d-inline-block align-text-top">
                 Bootstrap Online Shop With PHP
             </a>
@@ -18,25 +18,25 @@
                         <a class="nav-link" aria-current="page" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Connection</a>
+                        <a class="nav-link" href="connection.php">Connection</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Registration</a>
+                        <a class="nav-link" href="registration.php">Registration</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Profile</a>
+                        <a class="nav-link" href="profile.php">My Profile</a>
                     </li>
                     <li class="nav-item pos_relative">
                         <?php
                             echo "<span class='nb_elements_in_cart'>$nbElementsInCart</span>"
                         ?>
-                        <a class="nav-link" href="#">My Cart</a>
+                        <a class="nav-link" href="cart.php">My Cart</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Disconnection</a>
+                        <a class="nav-link" href="connection.php">Disconnection</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Back Off</a>
+                        <a class="nav-link" href="admin/index.php">Back Off</a>
                     </li>
                 </ul>
             </div>
