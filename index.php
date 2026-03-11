@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Bootstrap Online Shop With PHP</title>
+        <title>Bootstrap Online Shop With PHP - MAIN</title>
         <link
             rel="stylesheet"
             href="css/bootstrap/bootstrap.min.css"
@@ -39,24 +39,32 @@
 
                     <div class="row col-md-9">
                         <?php
-                            $itemPrice = 300.0;
-                            for ($photogrammeIdx = 1; $photogrammeIdx <= 10; $photogrammeIdx++) {
-                                echo "
-                                <div class='col-md-4 pr-2 pl-2 pb-2'>
-                                    <div class='card' style='width: 18rem;'>
-                                        <img src='pictures/$photogrammeIdx.png' class='card-img-top' alt='Photogramme - $photogrammeIdx/10'>
-                                        <div class='card-body'>
-                                            <h5 class='card-title text-center'>Photogramme - $photogrammeIdx/10</h5>
-                                            <p class='card-text text-center'>A piece of the photogramme</p>
+                            $dataBaseContent = file_get_contents("./products_database.json");
+                            $jsonDataBase = json_decode($dataBaseContent);
 
-                                            <div class='d-flex flex-row justify-content-center align-items-end'>
-                                                <h5 class='px-2'>$itemPrice$</h5>
-                                                <a href='product_info.php' target='_blank' class='btn btn-primary'>Buy</a>
+                            if ($jsonDataBase !== null) {
+                                //$jsonDataBaseSize = count($jsonDataBase);
+                                $jsonDataBaseSize = 10;
+                            
+                                for ($photogrammeIdx = 1; $photogrammeIdx <= $jsonDataBaseSize; $photogrammeIdx++) {
+                                    $itemPrice = $jsonDataBase->$photogrammeIdx->price;
+                                    $coverImagePath = $jsonDataBase->$photogrammeIdx->coverPath;
+
+                                    echo "<div class='col-md-4 col-8 pr-2 pl-2 pb-2'>
+                                        <div class='card' style='width: 18rem;'>
+                                            <img src='$coverImagePath' class='card-img-top' alt='Photogramme - $photogrammeIdx/10'>
+                                            <div class='card-body'>
+                                                <h5 class='card-title text-center'>Photogramme - $photogrammeIdx/10</h5>
+                                                <p class='card-text text-center'>A piece of the photogramme</p>
+
+                                                <div class='d-flex flex-row justify-content-center align-items-end'>
+                                                    <h6 class='px-2'>$itemPrice$</h6>
+                                                    <a href='product_info.php?productIdx=$photogrammeIdx' class='btn btn-primary'>See the product</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>";
-                                $itemPrice += 225.5;
+                                    </div>";
+                                }
                             }
                         ?>
                     </div>
@@ -70,6 +78,5 @@
         </div>
 
         <script src="js/bootstrap/bootstrap.min.js"></script>
-        <script src="js/app.js"></script>
     </body>
 </html>

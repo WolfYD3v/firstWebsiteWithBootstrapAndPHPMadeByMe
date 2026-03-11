@@ -1,0 +1,42 @@
+{
+    "1": {
+        "coverPath": "./pictures/1.png",
+        "price": 199.99
+    },
+    "2": {
+        "coverPath": "./pictures/2.png",
+        "price": 224.99
+    },
+    "3": {
+        "coverPath": "./pictures/3.png",
+        "price": 299.99
+    },
+    "4": {
+        "coverPath": "./pictures/4.png",
+        "price": 349.99
+    },
+    "5": {
+        "coverPath": "./pictures/5.png",
+        "price": 279.99
+    },
+    "6": {
+        "coverPath": "./pictures/6.png",
+        "price": 134.99
+    },
+    "7": {
+        "coverPath": "./pictures/7.png",
+        "price": 649.99
+    },
+    "8": {
+        "coverPath": "./pictures/8.png",
+        "price": 499.99
+    },
+    "9": {
+        "coverPath": "./pictures/9.png",
+        "price": 379.99
+    },
+    "10": {
+        "coverPath": "./pictures/10.png",
+        "price": 1599.99
+    }
+} 
